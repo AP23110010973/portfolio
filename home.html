@@ -1,0 +1,113 @@
+<?php
+    date_default_timezone_set("Asia/Kolkata");
+    $year = date("Y");
+    $name = "Mahasivabhattu Sai sriram chaitanya varma";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - <?php echo $name; ?></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://media.istockphoto.com/id/1459373176/vector/abstract-defocused-background-spring-summer-sea.jpg?s=612x612&w=0&k=20&c=P6D1VrXeeKsJfyKzlJeIqxyNXkeYtMb6C1mW6p68xro=');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+        header {
+            background-color: rgba(255, 165, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        main {
+            margin: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        pre {
+            text-align: right;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: orange;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center text-white py-3 bg-warning">
+        WELCOME TO MY HOMEPAGE
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto"
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href= "contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container mt-4 p-4 text-center rounded" style="background: rgba(0, 0, 0, 0.7);">
+        <h2 id="greeting" class="mb-4 text-warning"></h2>
+        <h1>About Me</h1>
+        <p class="lead">Hey, this is my homepage, and I want to share a bit about myself...</p>
+        <p>
+            I am a person who is positive about every aspect of life. I like to read, write, think, dream, talk, and listen...
+        </p>
+        <p>
+            I always wanted to be a great writer like Victor Hugo or a great psychologist like Sigmund Freud...
+        </p>
+        <p>
+            This is a brief introduction of myself. If you're interested in learning more, read my articles or check out my pictures...
+        </p>
+        <pre>....<?php echo $name; ?></pre>
+    </main>
+    
+    <footer class="text-center py-3 mt-4 text-white bg-dark">
+        <p>&copy; <?php echo $year . 'Mahasivabhattu Sai sriram chaitanya varma ' . $Mahasivabhattu Sai sriram chaitanya varma ; ?></p>  
+    </footer>
+
+    <script>
+        function showGreeting() {
+            const now = new Date();
+            const hour = now.getHours();
+            let greeting;
+
+            if (hour < 12) {
+                greeting = "Good Morning 🌅";
+            } else if (hour < 18) {
+                greeting = "Good Afternoon ☀";
+            } else {
+                greeting = "Good Evening 🌇";
+            }
+
+            document.getElementById("greeting").textContent = greeting;
+        }
+
+        window.onload = showGreeting;
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
